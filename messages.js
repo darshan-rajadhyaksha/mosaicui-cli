@@ -25,7 +25,7 @@ You must provide both:
 - component name
 
 👉 Usage:
-npx ${PACKAGE_NAME} <type>/<name>
+npx ${PACKAGE_NAME} <component-type>/<component-name>
 
 Example:
 npx ${PACKAGE_NAME} essentials/circular-list
@@ -39,10 +39,6 @@ Please enter the directory where the component should be created.
 
 Hint: 
 - e.g. ./src/components
-`.trim());
-
-const fetchSourceCodeSuccess = () => console.log(`
-✔ Component code fetched successfully!
 `);
 
 const fetchSourceCodeError = (componentLink) => console.log(`
@@ -68,7 +64,7 @@ const createComponentFilesAlreadyExistsError = (files) => console.log(`
 ${files.join("\n")}
 
 Please choose a different directory or use manual mode to copy-paste the code.
-`.trim());
+`);
 
 const createComponentFilesError = (files) => console.log(`
 ⚠ Below files could not be created:
@@ -76,14 +72,13 @@ const createComponentFilesError = (files) => console.log(`
 ${files.join("\n")}
 
 Please create these files manually and paste the code.
-`.trim());
+`);
 
 module.exports = {
   unsupportedNodeVersion,
   componentInfoSuccess,
   componentInfoError,
   componentPathError,
-  fetchSourceCodeSuccess,
   fetchSourceCodeError,
   createComponentFilesSuccess,
   createComponentFilesError,

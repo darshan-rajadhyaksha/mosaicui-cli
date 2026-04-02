@@ -13,7 +13,7 @@ const { MIN_NODE_MAJOR_VERSION } = require("./config");
   /**
    * Check node version
    */
-  const major = Number(process.versions.node.split('.')[0]);
+  const major = Number(process.versions.node.split(".")[0]);
   if(major < MIN_NODE_MAJOR_VERSION) {
     messages.unsupportedNodeVersion(MIN_NODE_MAJOR_VERSION);
     process.exit();
@@ -43,10 +43,7 @@ const { MIN_NODE_MAJOR_VERSION } = require("./config");
   /**
    * Generate component link
    */
-  const componentLink = getComponentLink(
-    componentType,
-    componentName
-  );
+  const componentLink = getComponentLink(componentName);
 
 
   /**

@@ -7,7 +7,7 @@ const {
 } = require("./config");
 
 const getComponentLink = (componentName) => (
-  `${BASE_COMPONENT_PATH}/${componentName}`
+  `${BASE_COMPONENT_PATH}/${componentName}/`
 );
 
 const getSourceCodePath = (
