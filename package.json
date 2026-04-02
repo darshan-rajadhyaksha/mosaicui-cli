@@ -1,6 +1,6 @@
 {
   "name": "mosaicui-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI tool to add mosaicui components into your project",
   "main": "index.js",
   "keywords": [
