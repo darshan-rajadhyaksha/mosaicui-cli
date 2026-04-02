@@ -27,10 +27,10 @@ const { MIN_NODE_MAJOR_VERSION } = require("./config");
     componentTypeAndName.split("/").map(t => t.trim())
   );
   if (!(
-    componentName && 
     componentType &&
-    componentName.length >= 0 &&
-    componentType.length >=0
+    componentName && 
+    componentType.length > 0 &&
+    componentName.length > 0
   )) {
     messages.componentInfoError();
     process.exit();
@@ -44,7 +44,6 @@ const { MIN_NODE_MAJOR_VERSION } = require("./config");
    * Generate component link
    */
   const componentLink = getComponentLink(componentName);
-
 
   /**
    * Get path to add component
@@ -90,7 +89,11 @@ const { MIN_NODE_MAJOR_VERSION } = require("./config");
         messages.createComponentFilesAlreadyExistsError(error.files);
         break;
       default: 
-        messages.createComponentFilesError(error.files);
+        messages.createComponentFilesError(
+          error.files,
+          componentLink
+        );
+        break;
     }
   }
 })();

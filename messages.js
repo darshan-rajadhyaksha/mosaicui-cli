@@ -1,7 +1,7 @@
 const { PACKAGE_NAME } = require("./config");
 
 const unsupportedNodeVersion = (requiredNodeVersion) => console.log(`
-✖ Node.js ${requiredNodeVersion}+ is required.
+✖  Node.js ${requiredNodeVersion}+ is required.
 Current version: ${process.versions.node}
 
 Please upgrade Node.js to continue.
@@ -11,14 +11,14 @@ const componentInfoSuccess = (
   componentType,
   componentName
 ) => console.log(`
-ℹ Creating component...
+ℹ  Creating component...
 
-📦 Type : ${componentType}
-📝 Name : ${componentName}
+📦  Type : ${componentType}
+📝  Name : ${componentName}
 `.trimStart());
 
 const componentInfoError = () => console.log(`
-✖ Missing required arguments.
+✖  Missing required arguments.
 
 You must provide both:
 - component type
@@ -33,7 +33,7 @@ npx ${PACKAGE_NAME} essentials/circular-list
 
 
 const componentPathError = () => console.log(`
-⚠ Directory not specified!
+⚠  Directory not specified!
 
 Please enter the directory where the component should be created.
 
@@ -42,7 +42,7 @@ Hint:
 `);
 
 const fetchSourceCodeError = (componentLink) => console.log(`
-✖ Failed to fetch component code.
+✖  Failed to fetch component code.
 
 You can still use manual mode:
 👉 Copy the component code from:
@@ -52,26 +52,28 @@ Then paste it into your project manually.
 `);
 
 const createComponentFilesSuccess = (componentLink) => console.log(`
-🎉 Your component is ready!
+🎉  Your component is ready!
 
-📖 Check props & usage docs:
+📖  Check props & usage docs:
 ${componentLink}
 `);
 
 const createComponentFilesAlreadyExistsError = (files) => console.log(`
-⚠ Below files already exist.
+⚠  Below files already exist.
 
 ${files.join("\n")}
 
 Please choose a different directory or use manual mode to copy-paste the code.
 `);
 
-const createComponentFilesError = (files) => console.log(`
-⚠ Below files could not be created:
+const createComponentFilesError = (files, componentLink) => console.log(`
+⚠  Below files could not be created:
 
 ${files.join("\n")}
 
 Please create these files manually and paste the code.
+👉 Copy the component code from:
+${componentLink}
 `);
 
 module.exports = {
