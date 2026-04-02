@@ -1,6 +1,6 @@
 {
   "name": "mosaicui-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI tool to add mosaicui components into your project",
   "main": "index.js",
   "keywords": [
@@ -14,6 +14,12 @@
     "type": "git",
     "url": "https://github.com/darshan-rajadhyaksha/mosaicui-cli"
   },
+  "files": [
+    "./index.js",
+    "./config.js",
+    "./messages.js",
+    "./util.js"
+  ],
   "engines": {
     "node": ">=18"
   },

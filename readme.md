@@ -1,5 +1,6 @@
 # MosaicUI CLI
 Effortlessly add MosaicUI components to your React projects with a CLI.
+
 ![Demo](./assets/demo.png)
 
 ## Features
@@ -16,13 +17,13 @@ Effortlessly add MosaicUI components to your React projects with a CLI.
 Run the command from your project root directory (the folder that contains package.json).
 
 ```bash
-npx mosaicui-cli <component-type>/<component-name>
+npx mosaicui-cli@latest <component-type>/<component-name>
 ```
 
 Example:
 
 ```bash
-npx mosaicui-cli essentials/circular-list
+npx mosaicui-cli@latest essentials/circular-list
 ```
 
 ## Available Components

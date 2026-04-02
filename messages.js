@@ -49,7 +49,7 @@ You can still use manual mode:
 ${componentLink}
 
 Then paste it into your project manually.
-`.trim());
+`);
 
 const createComponentFilesSuccess = (componentLink) => console.log(`
 🎉 Your component is ready!
