@@ -1,4 +1,4 @@
-const { PACKAGE_NAME } = require("./config");
+const { PACKAGE_NAME, GITHUB_PATH } = require("./config");
 
 const unsupportedNodeVersion = (requiredNodeVersion) => console.log(`
 ✖  Node.js ${requiredNodeVersion}+ is required.
@@ -56,6 +56,9 @@ const createComponentFilesSuccess = (componentLink) => console.log(`
 
 📖  Check props & usage docs:
 ${componentLink}
+
+If this helped, please ⭐ the project:
+👉 ${GITHUB_PATH}
 `);
 
 const createComponentFilesAlreadyExistsError = (files) => console.log(`
